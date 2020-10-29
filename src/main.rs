@@ -1,4 +1,4 @@
-use logic_units::{and::And, gates, inverter::Inverter, or::Or};
+use logic_units::{and::And, gates, not::Not, or::Or};
 
 fn main() {
     andit(2, 1);
@@ -11,14 +11,14 @@ fn main() {
     orit('c', '\0');
     orit(0.2, 1.0);
     orit(false, true);
-    invertit(2);
-    invertit(0);
-    invertit('c');
-    invertit('\0');
-    invertit(1.0);
-    invertit(0.0);
-    invertit(true);
-    invertit(false);
+    notit(2);
+    notit(0);
+    notit('c');
+    notit('\0');
+    notit(1.0);
+    notit(0.0);
+    notit(true);
+    notit(false);
 }
 
 fn andit<T: std::fmt::Display + And>(x: T, y: T) {
@@ -31,7 +31,7 @@ fn orit<T: std::fmt::Display + Or>(x: T, y: T) {
     println!("RES: {}", Or::or(&x, &y));
 }
 
-fn invertit<T: std::fmt::Display + Inverter>(x: T) {
+fn notit<T: std::fmt::Display + Not>(x: T) {
     print!("NOT {} ", x);
-    println!("RES: {}", Inverter::invert(&x));
+    println!("RES: {}", Not::not(&x));
 }

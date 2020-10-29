@@ -1,15 +1,15 @@
-pub trait Inverter {
-    fn invert(x: &Self) -> Self;
+pub trait Not {
+    fn not(x: &Self) -> Self;
 }
 
-impl Inverter for bool {
-    fn invert(x: &Self) -> Self {
+impl Not for bool {
+    fn not(x: &Self) -> Self {
         !x
     }
 }
 
-impl Inverter for char {
-    fn invert(x: &Self) -> Self {
+impl Not for char {
+    fn not(x: &Self) -> Self {
         if *x == '\0' {
             ' '
         } else {
@@ -18,8 +18,8 @@ impl Inverter for char {
     }
 }
 
-impl Inverter for usize {
-    fn invert(x: &Self) -> Self {
+impl Not for usize {
+    fn not(x: &Self) -> Self {
         if *x == 0 {
             1
         } else {
@@ -28,8 +28,8 @@ impl Inverter for usize {
     }
 }
 
-impl Inverter for u8 {
-    fn invert(x: &Self) -> Self {
+impl Not for u8 {
+    fn not(x: &Self) -> Self {
         if *x == 0 {
             1
         } else {
@@ -38,8 +38,8 @@ impl Inverter for u8 {
     }
 }
 
-impl Inverter for u16 {
-    fn invert(x: &Self) -> Self {
+impl Not for u16 {
+    fn not(x: &Self) -> Self {
         if *x == 0 {
             1
         } else {
@@ -48,8 +48,8 @@ impl Inverter for u16 {
     }
 }
 
-impl Inverter for u32 {
-    fn invert(x: &Self) -> Self {
+impl Not for u32 {
+    fn not(x: &Self) -> Self {
         if *x == 0 {
             1
         } else {
@@ -58,8 +58,8 @@ impl Inverter for u32 {
     }
 }
 
-impl Inverter for u64 {
-    fn invert(x: &Self) -> Self {
+impl Not for u64 {
+    fn not(x: &Self) -> Self {
         if *x == 0 {
             1
         } else {
@@ -68,8 +68,8 @@ impl Inverter for u64 {
     }
 }
 
-impl Inverter for u128 {
-    fn invert(x: &Self) -> Self {
+impl Not for u128 {
+    fn not(x: &Self) -> Self {
         if *x == 0 {
             1
         } else {
@@ -78,8 +78,8 @@ impl Inverter for u128 {
     }
 }
 
-impl Inverter for isize {
-    fn invert(x: &Self) -> Self {
+impl Not for isize {
+    fn not(x: &Self) -> Self {
         if *x == 0 {
             1
         } else {
@@ -88,8 +88,8 @@ impl Inverter for isize {
     }
 }
 
-impl Inverter for i8 {
-    fn invert(x: &Self) -> Self {
+impl Not for i8 {
+    fn not(x: &Self) -> Self {
         if *x == 0 {
             1
         } else {
@@ -98,8 +98,8 @@ impl Inverter for i8 {
     }
 }
 
-impl Inverter for i16 {
-    fn invert(x: &Self) -> Self {
+impl Not for i16 {
+    fn not(x: &Self) -> Self {
         if *x == 0 {
             1
         } else {
@@ -108,8 +108,8 @@ impl Inverter for i16 {
     }
 }
 
-impl Inverter for i32 {
-    fn invert(x: &Self) -> Self {
+impl Not for i32 {
+    fn not(x: &Self) -> Self {
         if *x == 0 {
             1
         } else {
@@ -118,8 +118,8 @@ impl Inverter for i32 {
     }
 }
 
-impl Inverter for i64 {
-    fn invert(x: &Self) -> Self {
+impl Not for i64 {
+    fn not(x: &Self) -> Self {
         if *x == 0 {
             1
         } else {
@@ -128,8 +128,8 @@ impl Inverter for i64 {
     }
 }
 
-impl Inverter for i128 {
-    fn invert(x: &Self) -> Self {
+impl Not for i128 {
+    fn not(x: &Self) -> Self {
         if *x == 0 {
             1
         } else {
@@ -138,8 +138,8 @@ impl Inverter for i128 {
     }
 }
 
-impl Inverter for f32 {
-    fn invert(x: &Self) -> Self {
+impl Not for f32 {
+    fn not(x: &Self) -> Self {
         if *x == 0.0 {
             1.0
         } else {
@@ -148,8 +148,8 @@ impl Inverter for f32 {
     }
 }
 
-impl Inverter for f64 {
-    fn invert(x: &Self) -> Self {
+impl Not for f64 {
+    fn not(x: &Self) -> Self {
         if *x == 0.0 {
             1.0
         } else {
