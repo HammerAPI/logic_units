@@ -1,4 +1,4 @@
-use logic_units::{and::And, gates, not::Not, or::Or};
+use logic_units::{and::And, not::Not, or::Or};
 
 fn main() {
     andit(2, 1);
